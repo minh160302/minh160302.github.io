@@ -9,6 +9,7 @@ import { useScrollTrigger } from "@material-ui/core";
 import { connect } from "react-redux";
 import { IRootState } from "store/reducers";
 import { changeTheme } from "store/actions/theme"
+import { changeRoute } from "store/actions/route";
 import { ChangeThemePayload } from "store/actions/payload-types";
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
@@ -30,6 +31,7 @@ import PhoneIcon from '@material-ui/icons/Phone';
 import ColorLensIcon from '@material-ui/icons/ColorLens';
 
 import routes from "routes";
+import { useEffect } from "react";
 
 const drawerWidth = 250;
 
@@ -145,10 +147,12 @@ const ScrollTop: React.FC<ScrollProps> = (props) => {
 interface IState {
   theme: string;
   color: string;
+  route: string;
 }
 
 interface IDispatch {
-  changeTheme: (theme: ChangeThemePayload) => {}
+  changeTheme: (theme: ChangeThemePayload) => {};
+  changeRoute: (route: string) => {};
 }
 
 
@@ -162,9 +166,18 @@ const Layout: React.FC<Props> = (props) => {
   const classes = useStyles();
   const history = useHistory();
   const matches = useMediaQuery('(max-width:768px)');
-  const [active, setActive] = useState(history.location.pathname)
+  const [active, setActive] = useState("/")
 
-  const [openDrawer, setOpenDrawer] = useState(!matches);
+  const [openDrawer, setOpenDrawer] = useState(false);
+
+  useEffect(() => {
+    setOpenDrawer(!matches)
+  }, [matches])
+
+  useEffect(() => {
+    setActive(history.location.pathname)
+    props.changeRoute(history.location.pathname)
+  }, [history.location.pathname])
 
   const toggleDrawer = (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
     if (event && event.type === 'keydown' &&
@@ -179,6 +192,7 @@ const Layout: React.FC<Props> = (props) => {
 
   const handleRouter = (route) => {
     setActive(route)
+    props.changeRoute(history.location.pathname)
     history.push(route)
   }
 
@@ -199,13 +213,15 @@ const Layout: React.FC<Props> = (props) => {
               key={text.name}
               className={classNames({
                 [classes.listItem]: true,
-                [classes.active]: text.path === history.location.pathname
+                [classes.active]: text.path === props.route
               })}
               onClick={() => handleRouter(text.path)}
             >
-              <ListItemIcon>{<text.icon className={classNames({
-                [classes.iconActive]: text.path === history.location.pathname
-              })} />}</ListItemIcon>
+              <ListItemIcon>
+                {<text.icon className={classNames({
+                  [classes.iconActive]: text.path === props.route
+                })} />}
+              </ListItemIcon>
               <Typography className={classes.drawerText}
               >{text.name}</Typography>
             </ListItem>
@@ -260,13 +276,15 @@ const Layout: React.FC<Props> = (props) => {
   )
 }
 
-const mapStateToProps = ({ theme }: IRootState) => ({
+const mapStateToProps = ({ theme, route }: IRootState) => ({
   theme: theme.theme,
-  color: theme.color
+  color: theme.color,
+  route: route.route
 })
 
 const mapDispatchToProps = {
-  changeTheme
+  changeTheme,
+  changeRoute
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Layout);

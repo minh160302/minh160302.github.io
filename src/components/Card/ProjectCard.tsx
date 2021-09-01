@@ -52,6 +52,12 @@ const useStyles = makeStyles((theme: Theme) =>
     description: {
       fontFamily: "'Hina Mincho', serif;",
       fontSize: 20,
+      height: 60
+    },
+    technology: {
+      fontFamily: "'Hina Mincho', serif;",
+      fontSize: 20,
+      height: 90
     },
     contentRoot: {
       "&:hover": {
@@ -82,7 +88,8 @@ interface ProjectCardProps {
   description: string;
   link: string;
   imageSrc: any;
-  githubUrl?: string
+  githubUrl?: string;
+  technology: string;
 }
 
 type Props = IState & IDispatch & ProjectCardProps
@@ -104,6 +111,9 @@ const ProjectCard: React.FC<Props> = (props) => {
           </Typography>
           <Typography className={classes.description} variant="body2" color="textSecondary" component="p">
             {props.description}
+          </Typography>
+          <Typography className={classes.technology} variant="body2" color="textSecondary" component="p">
+            <strong>Technology</strong>: {props.technology}
           </Typography>
         </CardContent>
       </div>

@@ -15,6 +15,7 @@ import bidmaxLanding from "assets/img/bidmax-landing.png"
 import moniPteLanding from "assets/img/moni-pte-landing.png"
 import pteUiLanding from "assets/img/pte-ui-landing.png"
 import mstcLanding from "assets/img/mstc-landing.png"
+import chatAppLanding from "assets/img/chat-app-landing.png"
 // @material-ui/icons
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
@@ -39,6 +40,9 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     justifyContent: "space-between",
     marginBottom: 25
   },
+  rowWrapper_2_sm: {
+    display: "block"
+  }
 
 }))
 
@@ -78,13 +82,15 @@ const Projects: React.FC<Props> = (props) => {
               imageSrc={pteLanding}
               link="/pte-magic"
               githubUrl="/github/pte-magic"
+              technology="ReactJS, Redux, NextJS, Spring Boot, PostgreSQL"
             />
             <ProjectCard
-              name="Max2Bid"
+              name="Bid2Max"
               description="Bidding platform for construction machines"
               imageSrc={bidmaxLanding}
               link="/bidmax"
               githubUrl="/github/bidmax"
+              technology="ReactJS, Redux, NextJS, Spring Boot, PostgreSQL"
             />
             <ProjectCard
               name="Nauvus"
@@ -92,14 +98,15 @@ const Projects: React.FC<Props> = (props) => {
               imageSrc={nauvusLanding}
               link="/nauvus"
               githubUrl="/github/nauvus"
+              technology="ReactJS, Redux"
             />
-
             <ProjectCard
-              name="PTE Magic"
+              name="Moni Vuong PTE"
               description="Video-based learning platform"
               imageSrc={moniPteLanding}
               link="/moni-pte"
               githubUrl="/github/moni-pte"
+              technology="ReactJS, Redux, Spring Boot, MongoDB, Netflix Eureka"
             />
             <ProjectCard
               name="PTE UI"
@@ -107,13 +114,15 @@ const Projects: React.FC<Props> = (props) => {
               imageSrc={pteUiLanding}
               link="/pte-ui"
               githubUrl="/github/pte-ui"
+              technology="Storybook, Redux, TypeScript"
             />
             <ProjectCard
               name="BENIT Academy"
-              description="E-learning platform like Udacity"
+              description="Scalable E-learning platform like Udacity"
               imageSrc={pteLanding}
               link="/nauvus"
               githubUrl="/github/nauvus"
+              technology="ReactJS, Redux, Spring Boot, MongoDB"
             />
           </>
           : <>
@@ -124,13 +133,15 @@ const Projects: React.FC<Props> = (props) => {
                 imageSrc={pteLanding}
                 link="/pte-magic"
                 githubUrl="/github/pte-magic"
+                technology="ReactJS, Redux, NextJS, Spring Boot, PostgreSQL"
               />
               <ProjectCard
-                name="Max2Bid"
+                name="Bid2Max"
                 description="Bidding platform for construction machines"
                 imageSrc={bidmaxLanding}
                 link="/bidmax"
                 githubUrl="/github/bidmax"
+                technology="ReactJS, Redux, NextJS, Spring Boot, PostgreSQL"
               />
               <ProjectCard
                 name="Nauvus"
@@ -138,15 +149,17 @@ const Projects: React.FC<Props> = (props) => {
                 imageSrc={nauvusLanding}
                 link="/nauvus"
                 githubUrl="/github/nauvus"
+                technology="ReactJS, Redux"
               />
             </div>
             <div className={classes.rowWrapper}>
               <ProjectCard
-                name="PTE Magic"
+                name="Moni Vuong PTE"
                 description="Video-based learning platform"
                 imageSrc={moniPteLanding}
                 link="/moni-pte"
                 githubUrl="/github/moni-pte"
+                technology="ReactJS, Redux, Spring Boot, MongoDB, Netflix Eureka"
               />
               <ProjectCard
                 name="PTE UI"
@@ -154,13 +167,15 @@ const Projects: React.FC<Props> = (props) => {
                 imageSrc={pteUiLanding}
                 link="/pte-ui"
                 githubUrl="/github/pte-ui"
+                technology="Storybook, Redux, TypeScript"
               />
               <ProjectCard
                 name="BENIT Academy"
-                description="E-learning platform like Udacity"
+                description="Scalable E-learning platform like Udacity"
                 imageSrc={pteLanding}
                 link="/nauvus"
                 githubUrl="/github/nauvus"
+                technology="ReactJS, Redux, Spring Boot, MongoDB"
               />
             </div>
           </>
@@ -169,20 +184,22 @@ const Projects: React.FC<Props> = (props) => {
       {/* Personal projects */}
       <h3>Personal Projects</h3>
       <>
-        <div className={classes.rowWrapper_2}>
+        <div className={matches === true ? classes.rowWrapper_2_sm : classes.rowWrapper_2}>
           <ProjectCard
             name="MSTC VN"
-            description="A company profile website for a friend"
+            description="A company profile website for a family business"
             imageSrc={mstcLanding}
             link="mstc-vn"
             githubUrl="/github/mstc"
+            technology="ReactJS, TypeScript, Spring Boot, AWS, MongoDB"
           />
           <ProjectCard
             name="Message web app"
             description="A message platform"
-            imageSrc={bidmaxLanding}
+            imageSrc={chatAppLanding}
             link="/bidmax"
             githubUrl="/github/bidmax"
+            technology="ReactJS, TypeScript, Spring Boot, NodeJS, SocketIO, AWS, MongoDB"
           />
         </div>
       </>
