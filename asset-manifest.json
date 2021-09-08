@@ -1,30 +1,32 @@
 {
   "files": {
     "main.css": "/static/css/main.a617e044.chunk.css",
-    "main.js": "/static/js/main.7c519a71.chunk.js",
-    "main.js.map": "/static/js/main.7c519a71.chunk.js.map",
+    "main.js": "/static/js/main.9f5d9ec3.chunk.js",
+    "main.js.map": "/static/js/main.9f5d9ec3.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.62b6a03f.js",
     "runtime-main.js.map": "/static/js/runtime-main.62b6a03f.js.map",
-    "static/js/2.4f11d852.chunk.js": "/static/js/2.4f11d852.chunk.js",
-    "static/js/2.4f11d852.chunk.js.map": "/static/js/2.4f11d852.chunk.js.map",
+    "static/js/2.60858107.chunk.js": "/static/js/2.60858107.chunk.js",
+    "static/js/2.60858107.chunk.js.map": "/static/js/2.60858107.chunk.js.map",
     "static/js/3.ee1def9e.chunk.js": "/static/js/3.ee1def9e.chunk.js",
     "static/js/3.ee1def9e.chunk.js.map": "/static/js/3.ee1def9e.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.a617e044.chunk.css.map": "/static/css/main.a617e044.chunk.css.map",
-    "static/js/2.4f11d852.chunk.js.LICENSE.txt": "/static/js/2.4f11d852.chunk.js.LICENSE.txt",
+    "static/js/2.60858107.chunk.js.LICENSE.txt": "/static/js/2.60858107.chunk.js.LICENSE.txt",
+    "static/media/bidmax-admin.06eff2ae.png": "/static/media/bidmax-admin.06eff2ae.png",
     "static/media/bidmax-landing.fa7e97eb.png": "/static/media/bidmax-landing.fa7e97eb.png",
     "static/media/chat-app-landing.f945e39b.png": "/static/media/chat-app-landing.f945e39b.png",
     "static/media/jisoo_1.e877b051.png": "/static/media/jisoo_1.e877b051.png",
     "static/media/moni-pte-landing.335a2568.png": "/static/media/moni-pte-landing.335a2568.png",
     "static/media/mstc-landing.38146eae.png": "/static/media/mstc-landing.38146eae.png",
     "static/media/nauvus-landing.35dc55f6.png": "/static/media/nauvus-landing.35dc55f6.png",
+    "static/media/pte-2.2ae69e89.png": "/static/media/pte-2.2ae69e89.png",
     "static/media/pte-magic-landing.3a902bc5.png": "/static/media/pte-magic-landing.3a902bc5.png",
     "static/media/pte-ui-landing.c7e3d7f2.png": "/static/media/pte-ui-landing.c7e3d7f2.png"
   },
   "entrypoints": [
     "static/js/runtime-main.62b6a03f.js",
-    "static/js/2.4f11d852.chunk.js",
+    "static/js/2.60858107.chunk.js",
     "static/css/main.a617e044.chunk.css",
-    "static/js/main.7c519a71.chunk.js"
+    "static/js/main.9f5d9ec3.chunk.js"
   ]
 }
