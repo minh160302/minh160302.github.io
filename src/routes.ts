@@ -10,6 +10,8 @@ import Projects from 'views/Projects';
 import Resume from 'views/Resume';
 import Contact from 'views/Contact';
 import Playground from 'views/Playground';
+import PteMagic from 'views/projects/PteMagic';
+import BidMax from 'views/projects/BidMax';
 
 const routes = [
   {
@@ -22,7 +24,7 @@ const routes = [
     path: "/projects",
     name: "Projects",
     icon: CodeIcon,
-    components: Projects
+    components: Projects,
   },
   {
     path: "/resume",
@@ -47,7 +49,21 @@ const routes = [
     name: "Theme",
     icon: ColorLensIcon,
     components: About
-  }
+  },
+  {
+    path: "/pte-magic",
+    name: "PTE Magic",
+    icon: ColorLensIcon,
+    components: PteMagic,
+    hide: true
+  },
+  {
+    path: "/bid2max",
+    name: "Bid2Max",
+    icon: ColorLensIcon,
+    components: BidMax,
+    hide: true
+  },
 ]
 
 export default routes;

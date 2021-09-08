@@ -82,15 +82,15 @@ const Projects: React.FC<Props> = (props) => {
               imageSrc={pteLanding}
               link="/pte-magic"
               githubUrl="/github/pte-magic"
-              technology="ReactJS, Redux, NextJS, Spring Boot, PostgreSQL"
+              technology="ReactJS, Redux, NextJS, Java Spring Boot, PostgreSQL"
             />
             <ProjectCard
               name="Bid2Max"
               description="Bidding platform for construction machines"
               imageSrc={bidmaxLanding}
-              link="/bidmax"
+              link="/bid2max"
               githubUrl="/github/bidmax"
-              technology="ReactJS, Redux, NextJS, Spring Boot, PostgreSQL"
+              technology="ReactJS, Redux, NextJS, Java Spring Boot, PostgreSQL"
             />
             <ProjectCard
               name="Nauvus"
@@ -106,7 +106,7 @@ const Projects: React.FC<Props> = (props) => {
               imageSrc={moniPteLanding}
               link="/moni-pte"
               githubUrl="/github/moni-pte"
-              technology="ReactJS, Redux, Spring Boot, MongoDB, Netflix Eureka"
+              technology="ReactJS, Redux, Java Spring Boot, MongoDB, Netflix Eureka"
             />
             <ProjectCard
               name="PTE UI"
@@ -122,7 +122,7 @@ const Projects: React.FC<Props> = (props) => {
               imageSrc={pteLanding}
               link="/nauvus"
               githubUrl="/github/nauvus"
-              technology="ReactJS, Redux, Spring Boot, MongoDB"
+              technology="ReactJS, Redux, Java Spring Boot, MongoDB"
             />
           </>
           : <>
@@ -133,15 +133,15 @@ const Projects: React.FC<Props> = (props) => {
                 imageSrc={pteLanding}
                 link="/pte-magic"
                 githubUrl="/github/pte-magic"
-                technology="ReactJS, Redux, NextJS, Spring Boot, PostgreSQL"
+                technology="ReactJS, Redux, NextJS, Java Spring Boot, PostgreSQL"
               />
               <ProjectCard
                 name="Bid2Max"
                 description="Bidding platform for construction machines"
                 imageSrc={bidmaxLanding}
-                link="/bidmax"
+                link="/bid2max"
                 githubUrl="/github/bidmax"
-                technology="ReactJS, Redux, NextJS, Spring Boot, PostgreSQL"
+                technology="ReactJS, Redux, NextJS, Java Spring Boot, PostgreSQL"
               />
               <ProjectCard
                 name="Nauvus"
@@ -159,7 +159,7 @@ const Projects: React.FC<Props> = (props) => {
                 imageSrc={moniPteLanding}
                 link="/moni-pte"
                 githubUrl="/github/moni-pte"
-                technology="ReactJS, Redux, Spring Boot, MongoDB, Netflix Eureka"
+                technology="ReactJS, Redux, Java Spring Boot, MongoDB, Netflix Eureka"
               />
               <ProjectCard
                 name="PTE UI"
@@ -175,7 +175,7 @@ const Projects: React.FC<Props> = (props) => {
                 imageSrc={pteLanding}
                 link="/nauvus"
                 githubUrl="/github/nauvus"
-                technology="ReactJS, Redux, Spring Boot, MongoDB"
+                technology="ReactJS, Redux, Java Spring Boot, MongoDB"
               />
             </div>
           </>
@@ -191,7 +191,7 @@ const Projects: React.FC<Props> = (props) => {
             imageSrc={mstcLanding}
             link="mstc-vn"
             githubUrl="/github/mstc"
-            technology="ReactJS, TypeScript, Spring Boot, AWS, MongoDB"
+            technology="ReactJS, TypeScript, Java Spring Boot, AWS, MongoDB"
           />
           <ProjectCard
             name="Message web app"
@@ -199,7 +199,7 @@ const Projects: React.FC<Props> = (props) => {
             imageSrc={chatAppLanding}
             link="/bidmax"
             githubUrl="/github/bidmax"
-            technology="ReactJS, TypeScript, Spring Boot, NodeJS, SocketIO, AWS, MongoDB"
+            technology="ReactJS, TypeScript, Java Spring Boot, NodeJS, SocketIO, AWS, MongoDB"
           />
         </div>
       </>

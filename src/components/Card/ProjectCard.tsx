@@ -15,6 +15,7 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from 'components/Button/IconButton';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import VisibilityIcon from '@material-ui/icons/Visibility';
+import { useHistory } from "react-router-dom";
 
 const drawerWidth = 250;
 
@@ -96,6 +97,8 @@ type Props = IState & IDispatch & ProjectCardProps
 
 const ProjectCard: React.FC<Props> = (props) => {
   const classes = useStyles();
+  const history = useHistory();
+
 
   const handleRouterGithub = (link) => {
     window.open(link, "_blank")
@@ -125,7 +128,7 @@ const ProjectCard: React.FC<Props> = (props) => {
           <GitHubIcon />
         </IconButton>
         <IconButton onClick={() => {
-          console.log(props.link)
+          history.push(props.link)
         }}>
           <VisibilityIcon />
         </IconButton>

@@ -126,7 +126,7 @@ const ScrollTop: React.FC<ScrollProps> = (props) => {
   });
 
   const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
-    const anchor = ((event.target as HTMLDivElement).ownerDocument || document).querySelector('#page-root');
+    const anchor = ((event.target as HTMLDivElement).ownerDocument || document).querySelector('#root');
     // console.log(anchor)
 
     if (anchor) {
@@ -208,23 +208,25 @@ const Layout: React.FC<Props> = (props) => {
       <List>
         {routes.map((text, index) => {
           return (
-            <ListItem
-              button
-              key={text.name}
-              className={classNames({
-                [classes.listItem]: true,
-                [classes.active]: text.path === props.route
-              })}
-              onClick={() => handleRouter(text.path)}
-            >
-              <ListItemIcon>
-                {<text.icon className={classNames({
-                  [classes.iconActive]: text.path === props.route
-                })} />}
-              </ListItemIcon>
-              <Typography className={classes.drawerText}
-              >{text.name}</Typography>
-            </ListItem>
+            <>
+              {text.hide || <ListItem
+                button
+                key={text.name}
+                className={classNames({
+                  [classes.listItem]: true,
+                  [classes.active]: text.path === props.route
+                })}
+                onClick={() => handleRouter(text.path)}
+              >
+                <ListItemIcon>
+                  {<text.icon className={classNames({
+                    [classes.iconActive]: text.path === props.route
+                  })} />}
+                </ListItemIcon>
+                <Typography className={classes.drawerText}
+                >{text.name}</Typography>
+              </ListItem>}
+            </>
           )
         })}
       </List>
