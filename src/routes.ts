@@ -32,24 +32,24 @@ const routes = [
     icon: DescriptionIcon,
     components: Resume
   },
-  {
-    path: "/contact",
-    name: "Contact",
-    icon: PhoneIcon,
-    components: Contact
-  },
+  // {
+  //   path: "/contact",
+  //   name: "Contact",
+  //   icon: PhoneIcon,
+  //   components: Contact
+  // },
   {
     path: "/playground",
     name: "Playground",
     icon: SportsEsportsIcon,
     components: Playground
   },
-  {
-    path: "/theme",
-    name: "Theme",
-    icon: ColorLensIcon,
-    components: About
-  },
+  // {
+  //   path: "/theme",
+  //   name: "Theme",
+  //   icon: ColorLensIcon,
+  //   components: About
+  // },
   {
     path: "/pte-magic",
     name: "PTE Magic",

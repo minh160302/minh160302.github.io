@@ -101,14 +101,6 @@ const Projects: React.FC<Props> = (props) => {
               technology="ReactJS, Redux"
             />
             <ProjectCard
-              name="Moni Vuong PTE"
-              description="Video-based learning platform"
-              imageSrc={moniPteLanding}
-              link="/moni-pte"
-              githubUrl="/github/moni-pte"
-              technology="ReactJS, Redux, Java Spring Boot, MongoDB, Netflix Eureka"
-            />
-            <ProjectCard
               name="PTE UI"
               description="npm package for UI components of questions in PTE test"
               imageSrc={pteUiLanding}
@@ -152,15 +144,7 @@ const Projects: React.FC<Props> = (props) => {
                 technology="ReactJS, Redux"
               />
             </div>
-            <div className={classes.rowWrapper}>
-              <ProjectCard
-                name="Moni Vuong PTE"
-                description="Video-based learning platform"
-                imageSrc={moniPteLanding}
-                link="/moni-pte"
-                githubUrl="/github/moni-pte"
-                technology="ReactJS, Redux, Java Spring Boot, MongoDB, Netflix Eureka"
-              />
+            <div className={classes.rowWrapper_2}>
               <ProjectCard
                 name="PTE UI"
                 description="npm package for UI components of questions in PTE test"

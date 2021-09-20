@@ -8,10 +8,14 @@ import { changeRoute } from "store/actions/route";
 import { ChangeThemePayload } from "store/actions/payload-types";
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 // @material-ui/icons
-import profileImg from "assets/img/jisoo_1.png"
+import profileImg from "assets/img/my-img.jpeg"
 import CheckIcon from '@material-ui/icons/Check';
 import { Button } from "@material-ui/core";
 import { useHistory } from "react-router-dom"
+import IconButton from "components/Button/IconButton";
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import EmailIcon from '@material-ui/icons/Email';
 
 const drawerWidth = 250;
 
@@ -77,7 +81,11 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     alignItems: "center",
     marginBottom: 20
   },
-
+  btnGroup: {
+    display: "flex",
+    justifyContent: "flex-end",
+    columnGap: 10
+  },
 }))
 
 
@@ -108,7 +116,7 @@ const About: React.FC<Props> = (props) => {
     "Hanoian",
     "Currently a sophomore major in Computer Science at Oberlin College, Ohio",
     "I'm passionate about programming and willing to challenge myself with new technology",
-    "Physics & Film lover"
+    "Physics & Film lover",
   ]
   return (
     <div className={classes.root}>
@@ -118,10 +126,9 @@ const About: React.FC<Props> = (props) => {
           <div className={classes.infoWrapper}>
             <h2 className={classes.greetTitle}>Hi, I'm Minh</h2>
             <Button className={classes.connectBtn} onClick={() => {
-              // change redux state to update sidebar
-              props.changeRoute("/contact")
-              history.push("/contact")
+              window.open("https://www.linkedin.com/in/cminh-nguyen/", "_blank")
             }}>Connect</Button>
+
           </div>
           <div className={classes.content}>
             {textContents.map((text, key) => <div className={classes.lineWrapper} key={key}>
@@ -129,7 +136,25 @@ const About: React.FC<Props> = (props) => {
               {text}
             </div>)}
           </div>
+          <div>
+            Contact me: <a href="mailto:mnguyen2@oberlin.edu">mnguyen2@oberlin.edu</a> or <a href="mailto:minh160302@gmail.com">minh160302@gmail.com</a>
+          </div>
+          <div>
+
+          </div>
         </div>
+      </div>
+      <div className={classes.btnGroup}>
+        <IconButton onClick={() => {
+          window.open("https://www.linkedin.com/in/cminh-nguyen/", "_blank")
+        }}>
+          <LinkedInIcon />
+        </IconButton>
+        <IconButton onClick={() => {
+          window.open("https://github.com/minh160302", "_blank")
+        }}>
+          <GitHubIcon />
+        </IconButton>
       </div>
     </div>
   )

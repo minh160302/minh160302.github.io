@@ -18,9 +18,8 @@ const Routes = () => (
         <Route path="/about" component={About} />
         <Route path="/projects" component={Projects} />
         <Route path="/resume" component={Resume} />
-        <Route path="/contact" component={Contact} />
+        {/* <Route path="/contact" component={Contact} /> */}
         <Route path="/playground" component={Playground} />
-        {/* <Redirect from="/" to="/about" /> */}
       </Router>
     </Layout>
   </div>
